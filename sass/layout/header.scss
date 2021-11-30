@@ -1,0 +1,16 @@
+header {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin: 20px 0px;
+  & .fa-arrow-left {
+    height: 100%;
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+  }
+  & img {
+    width: 50%;
+  }
+}

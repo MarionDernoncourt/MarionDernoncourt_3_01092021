@@ -1,0 +1,73 @@
+.fa-map-marker-alt {
+  width: 100%;
+  display: flex !important ;
+  justify-content: flex-end;
+  padding-right: 4%;
+  font-size: 1rem;
+}
+.form {
+  background: $color-background;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto";
+  &__search {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaeaea;
+    background: linear-gradient(to top, #eaeaea 90%, #d5d5d5);
+    border-top: 2px solid #d5d5d5;
+    &--icon {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    
+    }
+    &--input {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+    }
+  }
+  &__heading {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 44px;
+    & h2 {
+      height: 50%;
+    }
+    & p {
+      height: 50%;
+      margin-bottom: 0px;
+    }
+  }
+  &__btn {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include btn;
+  }
+}
+
+input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  text-align: left;
+  font-family: "Roboto";
+  font-size: 1rem;
+}
