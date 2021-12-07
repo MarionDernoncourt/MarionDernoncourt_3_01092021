@@ -3,6 +3,12 @@ header {
   text-align: center;
   width: 100%;
   margin: 20px 0px;
+  @include large-devices {
+    height: 8vh;
+  }
+  @include medium-devices {
+    height: 8vh;
+  }
   & .fa-arrow-left {
     height: 100%;
     position: absolute;
@@ -12,5 +18,12 @@ header {
   }
   & img {
     width: 50%;
+    height: 100%;
+    @include large-devices {
+      width: auto;
+    }
+    @include medium-devices {
+      width: auto;
+    }
   }
 }

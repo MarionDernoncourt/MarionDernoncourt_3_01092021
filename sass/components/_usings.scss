@@ -1,20 +1,44 @@
 .usings {
   width: 100%;
   height: 50vh;
+  box-sizing: border-box;
   & h2 {
     display: flex;
     align-items: center;
     margin: 10px 20px 0px 20px;
     height: 20%;
   }
+
+  @include large-devices {
+    height: 100%;
+    border-radius: 20px;
+    background-color: $color-background;
+    margin: 0px 10px;
+    padding-bottom: 20px;
+    & h2 {
+      margin: 0px 20px;
+    }
+  }
+  @include medium-devices {
+    height: 100%;
+    border-radius: 20px;
+    background-color: $color-background;
+    margin: 0px 10px;
+    padding-bottom: 20px;
+    & h2 {
+      margin: 0px 20px;
+    }
+  }
 }
 .steps {
+  box-sizing: border-box;
   width: 100%;
   height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   & .step {
     display: flex;
     flex-direction: row;
@@ -25,10 +49,11 @@
     margin: 10px 0px;
     background: $color-background;
     box-shadow: 2px 5px 10px rgb(0 0 0 / 10%);
-    &__label {
-      display: flex;
-      flex-direction: row;
+    @include large-devices {
+      margin: 10px 0px;
+      background-color: white;
     }
+
     &__tag {
       display: flex;
       align-items: center;
@@ -42,6 +67,7 @@
     }
     &__label {
       display: flex;
+      flex-direction: row;
       align-items: center;
       font-size: 1rem;
       font-weight: 500;

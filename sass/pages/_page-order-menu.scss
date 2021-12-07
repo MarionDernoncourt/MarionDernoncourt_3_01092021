@@ -1,0 +1,169 @@
+.container__picture {
+  width: 100%;
+  position: relative;
+  & img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+  }
+}
+
+.container-order {
+  box-sizing: border-box;
+  background-color: $color-background;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  margin-top: -30px;
+  border-radius: 30px 30px 0px 0px;
+  &__heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Shrikhand";
+    font-weight: 400;
+    font-size: 1.2em;
+    width: 100%;
+    & h2 {
+      width: 80%;
+      margin: 0px;
+    }
+    &--icon {
+      width: 20%;
+      padding: 0px 20px;
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__menu {
+    width: 100%;
+    @include large-devices {
+      @include services_flex;
+    }
+    @include medium-devices {
+      @include services_flex;
+    }
+  }
+  &__btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin:  20px 0px;
+    @include btn;
+  }
+}
+.container_services {
+  @include large-devices {
+    width: 30%;
+    margin: 0px 10px;
+  }
+  @include medium-devices {
+    width: 30%;
+    margin: 0px 10px;
+
+  }
+}
+
+.card__heading {
+  width: 100%;
+  & h3 {
+    margin-bottom: 6px;
+  }
+  & .underline {
+    box-sizing: border-box;
+    width: 3em;
+    height: 6px;
+    border-top: 3px solid $color-tertiary;
+    margin-bottom: 10px;
+  }
+}
+
+.card-menu {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: white;
+  border-radius: 16px;
+  margin: 10px 0px;
+  box-shadow: $box-shadow;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  padding: 10px;
+  position: relative;
+  &__info {
+    width: 80%;
+    @include card-info;
+  }
+  &__price {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    transform: translateX(0.1%);
+    transition: transform 1s;
+    & p {
+      margin: 0px;
+      font-weight: 500;
+    }
+  }
+  &__animation {
+    display: none;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: $color-tertiary;
+    color: white;
+    border-radius: 0px 16px 16px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: 100%;
+
+    & .fa-check-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+  @include large-devices {
+    width: 90%;
+  }
+  @include medium-devices {
+    width: 90%;
+  }
+}
+.card-menu {
+  &:hover {
+    .card-menu__animation {
+      animation: check $check-dur ease-in-out both;
+      animation-iteration-count: 1;
+    }
+    .card-menu__price {
+      transform: translateX(-100%);
+      transition: transform $check-dur ease-in-out ;
+    }
+    .card-menu__info {
+      width: 60%;
+      transition: width $check-dur ease-in-out ;
+    }
+  }
+}
+
+.card-menu {
+  opacity: 0;
+  animation: cardmenu $anim-dur forwards;
+  @for $i from 1 through $num-card-menu {
+    &--#{$i} {
+      animation-delay: $anim-delay * $i;
+    }
+  }
+}

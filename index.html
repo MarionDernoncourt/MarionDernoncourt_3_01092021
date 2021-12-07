@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -18,64 +18,72 @@
   </head>
 
   <body>
+    <div class="loader">
+      <i class="fas fa-spinner"></i>
+    </div>
+
     <header>
       <!-- <i class="fas fa-arrow-left"></i> -->
       <img src="img/ohmyfood.png" alt="logo" />
     </header>
 
-    <form class="form" method="post" action="traitement.php">
-      <div class="form__search">
-        <div class="form__search--icon">
-          <i class="fas fa-map-marker-alt"></i>
-        </div>
-        <div class="form__search--input">
-          <input
-            type="text"
-            name="city"
-            value="Paris, Belleville"
-            size="20"
-            autocomplete="off"
-          />
-        </div>
-      </div>
-      <div class="form__heading">
-        <h2>Réservez le menu qui vous convient</h2>
-        <p>
-          Découvrez des restaurants d'exception, sélectionnés par nos soins.
-        </p>
-      </div>
-      <div class="form__btn">
-        <input type="submit" value="Explorer nos restaurants" />
-      </div>
-    </form>
-
-    <div class="usings">
-      <h2>Fonctionnement</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step__tag">1</div>
-          <div class="step__label">
-            <div class="step__label--icon">
-              <i class="fas fa-mobile-alt"></i>
-            </div>
-            <p>Choississez un restaurant</p>
+    <div class="preview">
+      <form class="form" method="post" action="traitement.php">
+        <div class="form__search">
+          <div class="form__search--icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="form__search--input">
+            <input
+              type="text"
+              name="city"
+              value="Paris, Belleville"
+              size="20"
+              autocomplete="off"
+            />
           </div>
         </div>
-
-        <div class="step">
-          <div class="step__tag">2</div>
-          <div class="step__label">
-            <div class="step__label--icon"><i class="fas fa-list-ul"></i></div>
-            <p>Composez votre menu</p>
-          </div>
+        <div class="form__heading">
+          <h2>Réservez le menu qui vous convient</h2>
+          <p>
+            Découvrez des restaurants d'exception, sélectionnés par nos soins.
+          </p>
         </div>
-        <div class="step step--color">
-          <div class="step__tag">3</div>
-          <div class="step__label">
-            <div class="step__label--icon step__color--icon">
-              <i class="fas fa-store"></i>
+        <div class="form__btn">
+          <input type="submit" value="Explorer nos restaurants" />
+        </div>
+      </form>
+
+      <div class="usings">
+        <h2>Fonctionnement</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step__tag">1</div>
+            <div class="step__label">
+              <div class="step__label--icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <p>Choississez un restaurant</p>
             </div>
-            <p>Dégustez au restaurant</p>
+          </div>
+
+          <div class="step">
+            <div class="step__tag">2</div>
+            <div class="step__label">
+              <div class="step__label--icon">
+                <i class="fas fa-list-ul"></i>
+              </div>
+              <p>Composez votre menu</p>
+            </div>
+          </div>
+          <div class="step step--color">
+            <div class="step__tag">3</div>
+            <div class="step__label">
+              <div class="step__label--icon step__color--icon">
+                <i class="fas fa-store"></i>
+              </div>
+              <p>Dégustez au restaurant</p>
+            </div>
           </div>
         </div>
       </div>
@@ -84,7 +92,7 @@
     <section class="restaurant">
       <h2>Restaurants</h2>
       <div class="container">
-        <a href="order3.html" target="_blanck" class="card">
+        <a href="order3.html" class="card">
           <div class="card__picture">
             <img
               src="img/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -98,16 +106,16 @@
               <p>Ménilmontant</p>
             </div>
             <div class="card-info__like">
-              <div class="card-info__like--active">
-                <i class="fas fa-heart"></i>
-              </div>
               <div class="card-info__like--disable">
                 <i class="far fa-heart"></i>
+              </div>
+              <div class="card-info__like--active">
+                <i class="fas fa-heart"></i>
               </div>
             </div>
           </div>
         </a>
-        <a href="order2.html" target="_blanck" class="card">
+        <a href="order2.html" class="card">
           <div class="card__picture">
             <img
               src="img/stil-u2Lp8tXIcjw-unsplash.jpg"
@@ -121,16 +129,16 @@
               <p>Charonne</p>
             </div>
             <div class="card-info__like">
-              <div class="card-info__like--active">
-                <i class="fas fa-heart auto"></i>
-              </div>
               <div class="card-info__like--disable">
-                <i class="far fa-heart hover"></i>
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="card-info__like--active">
+                <i class="fas fa-heart"></i>
               </div>
             </div>
           </div>
         </a>
-        <a href="order1.html" target="_blanck" class="card">
+        <a href="order1.html" class="card">
           <div class="card__picture">
             <img
               src="img/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
@@ -144,16 +152,16 @@
               <p>Cité Rouge</p>
             </div>
             <div class="card-info__like">
-              <div class="card-info__like--active">
-                <i class="fas fa-heart"></i>
-              </div>
               <div class="card-info__like--disable">
                 <i class="far fa-heart"></i>
+              </div>
+              <div class="card-info__like--active">
+                <i class="fas fa-heart"></i>
               </div>
             </div>
           </div>
         </a>
-        <a href="order4.html" target="_blanck" class="card">
+        <a href="order4.html" class="card">
           <div class="card__picture">
             <img
               src="img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
@@ -167,11 +175,11 @@
               <p>Folie-Méricourt</p>
             </div>
             <div class="card-info__like">
-              <div class="card-info__like--active">
-                <i class="fas fa-heart"></i>
-              </div>
               <div class="card-info__like--disable">
                 <i class="far fa-heart"></i>
+              </div>
+              <div class="card-info__like--active">
+                <i class="fas fa-heart"></i>
               </div>
             </div>
           </div>

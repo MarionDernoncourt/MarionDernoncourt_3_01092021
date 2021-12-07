@@ -1,12 +1,14 @@
+@mixin large-devices {
+  @media screen and (min-width: map-get($breakpoints, tab)) {
+    @content;
+  }
+}
 
-// @mixin hearder-arrow {
-//   .fa-arrow-left {
-//     font-size: 1rem;
-//     position: absolute;
-//     top: 30px;
-//     left: 30px;
-//   }
-// }
+@mixin medium-devices {
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tab)) {
+    @content;
+  }
+}
 
 @mixin btn {
   input {
@@ -21,7 +23,7 @@
     box-shadow: $box-shadow;
     width: auto;
     &:hover {
-      opacity: 0.8;
+      opacity: 0.7;
       transition: opacity 300ms, box-shadow 300ms;
       box-shadow: 0px 0px 11px rgb(0 0 0 / 40%);
     }
@@ -33,12 +35,17 @@
     margin: 0px;
     font-weight: 700;
     font-size: 1.1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   & p {
     margin: 0px;
     font-weight: 300;
     font-size: 1rem;
     white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 @mixin card-info__like {
@@ -48,4 +55,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+
+@mixin services_flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
 }
