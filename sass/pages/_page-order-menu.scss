@@ -145,7 +145,6 @@
   &:hover {
     .card-menu__animation {
       animation: check $check-dur ease-in-out both;
-      animation-iteration-count: 1;
     }
     .card-menu__price {
       transform: translateX(-100%);

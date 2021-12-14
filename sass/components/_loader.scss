@@ -1,0 +1,43 @@
+
+.spinner {
+    &__medium {
+      animation: spinner-loader 3s ease-in-out backwards reverse;
+      position: absolute;
+      color: transparent;
+  
+      & .fa-spinner {
+        font-size: 3rem;
+      }
+    }
+    &__small {
+      position: absolute;
+      animation: spinner-loader 3s ease-in-out;
+      color: transparent;
+  
+      & .fa-spinner {
+        font-size: 5rem;
+        transform: scale(1);
+      }
+    }
+    &__dot {
+      position: absolute;
+      color: $color-tertiary;
+      margin: 2px;
+      font-size: 0.5rem;
+      animation: dot-loader 3s ease-in-out forwards;
+    }
+  }
+  .loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    z-index: -1;
+    animation: loader 3s cubic-bezier(1, 0, 0.8, 0.2);
+  }
+  
