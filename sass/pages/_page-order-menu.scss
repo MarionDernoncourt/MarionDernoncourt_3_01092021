@@ -37,7 +37,15 @@
       font-size: 1rem;
       display: flex;
       justify-content: center;
+      align-items: center;
     }
+    & .card-info__like--disable {
+      position: absolute;
+    }
+    & .card-info__like--active {
+      position: absolute;
+    }
+    position: relative;
   }
   &__menu {
     width: 100%;
@@ -52,7 +60,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin:  20px 0px;
+    margin: 20px 0px;
     @include btn;
   }
 }
@@ -64,7 +72,6 @@
   @include medium-devices {
     width: 30%;
     margin: 0px 10px;
-
   }
 }
 
@@ -95,17 +102,20 @@
   align-items: flex-end;
   margin-bottom: 20px;
   padding: 10px;
+  overflow: hidden;
   position: relative;
   &__info {
     width: 80%;
+
+    transition: width $check-dur ease-in-out;
     @include card-info;
   }
   &__price {
     width: 20%;
     display: flex;
     justify-content: center;
-    transform: translateX(0.1%);
-    transition: transform 1s;
+    transform: translateX(0%);
+    transition: transform $check-dur;
     & p {
       margin: 0px;
       font-weight: 500;
@@ -124,14 +134,21 @@
     justify-content: center;
     width: 20%;
     height: 100%;
-    transform: scaleX(0);
+    margin-right: -20%;
+    transform: translateX(0);
     transform-origin: 100%;
-
+    transition: transform $check-dur;
+    &--icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     & .fa-check-circle {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
+      width: 0%;
+      font-size: 1.2rem;
     }
   }
   @include large-devices {
@@ -144,15 +161,19 @@
 .card-menu {
   &:hover {
     .card-menu__animation {
-      animation: check $check-dur ease-in-out both;
+      transform: translateX(-100%);
+      transition: transform $check-dur;
+      &--icon {
+        animation: check-rotate $check-dur ease-out both;
+      }
     }
     .card-menu__price {
       transform: translateX(-100%);
-      transition: transform $check-dur ease-in-out ;
+      transition: transform $check-dur ease-in-out;
     }
     .card-menu__info {
       width: 60%;
-      transition: width $check-dur ease-in-out ;
+      transition: width $check-dur ease-in-out;
     }
   }
 }
